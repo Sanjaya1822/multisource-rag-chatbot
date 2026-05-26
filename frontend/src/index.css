@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #030712;
+    color: #f1f5f9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply px-3 py-2 text-gray-400 hover:text-gray-200 hover:bg-white/5 rounded-lg transition-all duration-200;
+  }
+
+  .input-field {
+    @apply w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-gray-200 placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/30 transition-all duration-200;
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.03) 25%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(255, 255, 255, 0.03) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+}
+
+/* Markdown prose styles inside AI messages */
+.prose-custom h1, .prose-custom h2, .prose-custom h3 {
+  color: #e2e8f0;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.prose-custom p { margin-bottom: 0.75rem; line-height: 1.7; }
+.prose-custom ul, .prose-custom ol { padding-left: 1.5rem; margin-bottom: 0.75rem; }
+.prose-custom li { margin-bottom: 0.25rem; }
+.prose-custom code {
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-family: 'Courier New', monospace;
+}
+.prose-custom pre {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 0.75rem;
+}
+.prose-custom pre code {
+  background: transparent;
+  padding: 0;
+  color: #e2e8f0;
+}
+.prose-custom blockquote {
+  border-left: 3px solid #3b82f6;
+  padding-left: 1rem;
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
+}
+.prose-custom a { color: #60a5fa; text-decoration: underline; }
+.prose-custom strong { color: #f1f5f9; font-weight: 600; }
+.prose-custom table { border-collapse: collapse; width: 100%; margin-bottom: 0.75rem; }
+.prose-custom th, .prose-custom td { border: 1px solid rgba(255,255,255,0.1); padding: 0.5rem 0.75rem; }
+.prose-custom th { background: rgba(255,255,255,0.05); font-weight: 600; }

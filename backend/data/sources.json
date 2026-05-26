@@ -1,0 +1,26 @@
+[
+  {
+    "id": "8ea20261-a4fa-4278-8623-f0c6efb0b10b",
+    "name": "PROJECT_SCRIPT.pdf",
+    "type": "pdf",
+    "url": null,
+    "chunkCount": 4,
+    "createdAt": "2026-05-26T16:33:05.158Z"
+  },
+  {
+    "id": "54a502d5-e3c8-4466-bb44-9a0b30b29148",
+    "name": "geeksforgeeks.org",
+    "type": "website",
+    "url": "https://www.geeksforgeeks.org/java/java/",
+    "chunkCount": 3,
+    "createdAt": "2026-05-26T16:37:49.985Z"
+  },
+  {
+    "id": "c4c8002c-36b8-41da-869b-6d79ee02e264",
+    "name": "YouTube: KurGnK76-EU",
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=KurGnK76-EU",
+    "chunkCount": 3,
+    "createdAt": "2026-05-26T16:38:33.476Z"
+  }
+]
